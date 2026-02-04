@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@property --color-center {
+    syntax: '<color>';
+    initial-value: #FFF0F7;
+    inherits: false;
+}
+
+@property --color-mid {
+    syntax: '<color>';
+    initial-value: #FFC8E9;
+    inherits: false;
+}
+
+@property --color-edge {
+    syntax: '<color>';
+    initial-value: #FFB8E0;
+    inherits: false;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gaegu', cursive;
+    --color-center: #FFFFFF;
+    --color-mid: #FFC8E9;
+    --color-edge: #FFB8E0;
+    background: radial-gradient(ellipse at center, var(--color-center) 0%, var(--color-mid) 50%, var(--color-edge) 100%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        --color-center: #FFFFFF;
+        --color-mid: #FFC8E9;
+        --color-edge: #FFB8E0;
+    }
+
+    50% {
+        --color-center: #FFF0F7;
+        --color-mid: #FFB8E0;
+        --color-edge: #FFA8D6;
+    }
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.title {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #333333;
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+.soundcloud-icon {
+    width: 1.75em;
+    height: 1.75em;
+}
