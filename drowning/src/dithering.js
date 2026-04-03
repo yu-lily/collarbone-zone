@@ -13,6 +13,7 @@ if (bgEl) {
   img.src = "../img/drowning-in-moonlight/sky.png";
 
   function mountImageShader() {
+    try {
     new ShaderMount(
       bgEl,
       imageDitheringFragmentShader,
@@ -40,6 +41,10 @@ if (bgEl) {
       undefined,
       0
     );
+    document.body.classList.add("shader-loaded");
+    } catch (e) {
+      // WebGL not available — fallback image stays visible
+    }
   }
 
   if (img.complete && img.naturalWidth > 0) {
