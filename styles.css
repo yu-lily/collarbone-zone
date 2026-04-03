@@ -21,7 +21,16 @@ body {
   background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
 }
 
+#dithering {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .landing {
+  position: relative;
+  z-index: 1;
   min-height: 100%;
   display: grid;
   place-items: center;
@@ -59,8 +68,9 @@ h1 {
   color: var(--icon);
   text-decoration: none;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.45);
-  transition: transform 160ms ease, color 160ms ease, background-color 160ms ease;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 160ms ease, color 160ms ease, box-shadow 160ms ease;
 }
 
 .social-link i {
@@ -71,7 +81,8 @@ h1 {
 .social-link:hover,
 .social-link:focus-visible {
   color: var(--icon-hover);
-  background: rgba(255, 255, 255, 0.75);
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transform: translateY(-2px);
   outline: none;
 }
