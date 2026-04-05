@@ -52,6 +52,74 @@ h1 {
   visibility: hidden;
 }
 
+.release-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px 10px 10px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  transition: background 160ms ease;
+}
+
+.release-bar:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.release-bar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.release-bar__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.release-bar__label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: #e06090;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.release-bar__label svg {
+  width: 10px;
+  height: 10px;
+  fill: #e06090;
+}
+
+.release-bar__title {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--icon);
+}
+
+.release-bar__chevron {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: rgba(95, 95, 95, 0.4);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .socials {
   display: flex;
   gap: 1rem;
@@ -68,9 +136,12 @@ h1 {
   color: var(--icon);
   text-decoration: none;
   border-radius: 999px;
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 160ms ease, color 160ms ease, box-shadow 160ms ease;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 160ms ease, color 160ms ease, background 160ms ease;
 }
 
 .social-link i {
@@ -81,8 +152,7 @@ h1 {
 .social-link:hover,
 .social-link:focus-visible {
   color: var(--icon-hover);
-  background: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
   outline: none;
 }
