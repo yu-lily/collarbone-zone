@@ -1,1 +1,1 @@
-# collarbone-zone-codex
+# collarbone-zone
