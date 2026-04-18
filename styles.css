@@ -89,7 +89,7 @@ h1 {
   align-items: center;
   gap: 4px;
   font-family: "Inter", sans-serif;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 600;
   color: #e06090;
   letter-spacing: 0.8px;
@@ -103,6 +103,7 @@ h1 {
 }
 
 .release-bar__title {
+  text-align: left;
   font-family: "Inter", sans-serif;
   font-size: 13px;
   font-weight: 500;
